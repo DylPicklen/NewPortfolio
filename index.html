@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="format-detection" content="telephone=no">
     <title>Your Name</title>
     <style>
         /* Minimalist Reset */
@@ -18,6 +19,7 @@
             line-height: 1.6;
             color: #333;
             background: #fff;
+            font-size: 16px;
         }
 
         /* Profile Photo */
@@ -25,9 +27,10 @@
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            margin: 2rem auto;
+            margin: 1rem auto;
             display: block;
             object-fit: cover;
+            max-width: 100%;
         }
 
         /* Header */
@@ -50,6 +53,7 @@
             text-decoration: none;
             font-size: 0.9rem;
             transition: color 0.3s ease;
+            padding: 0.5rem 1rem;
         }
 
         nav a:hover {
@@ -59,24 +63,24 @@
         /* Main Content */
         main {
             max-width: 680px;
-            margin: 3rem auto;
+            margin: 2rem auto;
             padding: 0 1rem;
         }
 
         section {
-            margin: 4rem 0;
+            margin: 3rem 0;
+            padding: 2rem 0;
         }
 
         h1 {
             font-weight: 500;
-            font-size: 1.4rem;
+            font-size: 1.8rem;
             margin-bottom: 1.5rem;
             color: #222;
         }
 
         p {
             color: #555;
-            font-size: 1rem;
             line-height: 1.8;
             margin-bottom: 1.5rem;
         }
@@ -84,7 +88,7 @@
         /* Projects Grid */
         .projects-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 2rem;
             margin-top: 2rem;
         }
@@ -93,6 +97,18 @@
             padding: 1.5rem;
             border: 1px solid #eee;
             border-radius: 8px;
+            transition: transform 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-3px);
+        }
+
+        /* Work Experience */
+        .work-item {
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            border-left: 3px solid #eee;
         }
 
         /* Contact Section */
@@ -109,22 +125,85 @@
             border-top: 1px solid #eee;
         }
 
-        /* Responsive */
+        /* Responsive Design */
         @media (max-width: 600px) {
             nav ul {
-                flex-wrap: wrap;
-                gap: 1rem;
+                flex-direction: column;
+                gap: 0.5rem;
+                padding: 1rem 0;
             }
             
+            nav a {
+                font-size: 1rem;
+                display: block;
+            }
+
+            .profile-photo {
+                width: 120px;
+                height: 120px;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-card {
+                padding: 1rem;
+            }
+
+            .work-item {
+                padding: 1rem;
+                margin-bottom: 1.5rem;
+            }
+
             section {
-                margin: 3rem 0;
+                margin: 2rem 0;
+                padding: 1.5rem 0;
+            }
+
+            h1 {
+                font-size: 1.6rem;
+            }
+        }
+
+        @media (min-width: 768px) {
+            body {
+                font-size: 18px;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+
+            main {
+                margin: 4rem auto;
+            }
+
+            section {
+                margin: 4rem 0;
+                padding: 3rem 0;
+            }
+        }
+
+        @media (prefers-reduced-motion: no-preference) {
+            .project-card {
+                transition: all 0.3s ease;
+            }
+        }
+
+        @media print {
+            nav { 
+                display: none; 
+            }
+            .profile-photo { 
+                width: 100px; 
             }
         }
     </style>
 </head>
 <body>
     <header>
-        <!-- REPLACE THIS BASE64 IMAGE WITH your-photo.png -->
+        <!-- REPLACE THIS IMAGE WITH your-photo.png -->
         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAYAAAA8AXHiAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADNSURBVHgB7dixDcJAEETR2YQGBaChp6QhOkpKQkHkK5u7m9HqfZrt5Lxzzg9e4BfP9gEAAAAAAAAAAAAAAAAAAIA/2LYtrus6HvM8z2N1z/Mc67quY3X7vh/rvu/jt/Z9H+t1Xcfq3vd9rO/3O1b3eDzG+nw+x+o+AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPyfHw4kAZ+Yk4a7AAAAAElFTkSuQmCC" 
              alt="Your Name" 
              class="profile-photo">
