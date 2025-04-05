@@ -1,97 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="format-detection" content="telephone=no">
-    <title>Your Name</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="format-detection" content="telephone=no" />
+  <title>Your Name</title>
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-    <header>
-        <h1 class="name-header">Your Name</h1>
-        <img src="your-photo.png" alt="Your Name" class="profile-photo">
-        <nav>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#work">Work</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#collaborations">Collaborations</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="about">
-            <h1>About</h1>
-            <p>[Your professional summary]</p>
-        </section>
+  <header>
+    <h1 class="name-header">Your Name</h1>
+    <img src="your-photo.png" alt="Portrait of Your Name" class="profile-photo" />
+    <nav aria-label="Main navigation">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#collaborations">Collaborations</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <section id="work">
-            <h1>Work</h1>
-            <div class="experience">
-                <div class="work-item">
-                    <h2>[Job Title]</h2>
-                    <p>[Company] | [Dates]</p>
-                    <ul>
-                        <li>[Achievement]</li>
-                        <li>[Responsibility]</li>
-                    </ul>
-                </div>
-                <div class="work-item">
-                    <h2>[Job Title]</h2>
-                    <p>[Company] | [Dates]</p>
-                    <ul>
-                        <li>[Achievement]</li>
-                        <li>[Responsibility]</li>
-                    </ul>
-                </div>
-            </div>
-        </section>
+  <main>
+    <section id="about">
+      <h1>About</h1>
+      <p>[Your professional summary]</p>
+    </section>
 
-        <section id="projects">
-            <h1>Projects</h1>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <h3>[Project Title]</h3>
-                    <p>[Project description]</p>
-                    <p><strong>Technologies:</strong> [Tech stack]</p>
-                </div>
-                <div class="project-card">
-                    <h3>[Project Title]</h3>
-                    <p>[Project description]</p>
-                    <p><strong>Technologies:</strong> [Tech stack]</p>
-                </div>
-            </div>
-        </section>
+    <section id="work">
+      <h1>Work</h1>
+      <div class="experience">
+        <article class="work-item">
+          <h2>[Job Title]</h2>
+          <p><strong>[Company]</strong> &nbsp;|&nbsp; [Dates]</p>
+          <ul>
+            <li>[Achievement]</li>
+            <li>[Responsibility]</li>
+          </ul>
+        </article>
 
-        <section id="collaborations">
-            <h1>Collaborations</h1>
-            <div class="collaborations-grid">
-                <div class="collab-card">
-                    <h3>[Collaborator]</h3>
-                    <p>[Collaboration details]</p>
-                    <p><strong>Project:</strong> [Project name]</p>
-                </div>
-                <div class="collab-card">
-                    <h3>[Collaborator]</h3>
-                    <p>[Collaboration details]</p>
-                    <p><strong>Project:</strong> [Project name]</p>
-                </div>
-            </div>
-        </section>
+        <article class="work-item">
+          <h2>[Job Title]</h2>
+          <p><strong>[Company]</strong> &nbsp;|&nbsp; [Dates]</p>
+          <ul>
+            <li>[Achievement]</li>
+            <li>[Responsibility]</li>
+          </ul>
+        </article>
+      </div>
+    </section>
 
-        <section id="contact">
-            <h1>Contact</h1>
-            <div class="contact-info">
-                <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
-                <p>LinkedIn: <a href="#">linkedin.com/in/you</a></p>
-                <p>GitHub: <a href="#">github.com/you</a></p>
-            </div>
-        </section>
-    </main>
-    <footer>
-        <p>© 2023 Your Name</p>
-    </footer>
+    <section id="projects">
+      <h1>Projects</h1>
+      <div class="projects-grid">
+        <article class="project-card">
+          <h3>[Project Title]</h3>
+          <p>[Project description]</p>
+          <p><strong>Technologies:</strong> [Tech stack]</p>
+        </article>
+
+        <article class="project-card">
+          <h3>[Project Title]</h3>
+          <p>[Project description]</p>
+          <p><strong>Technologies:</strong> [Tech stack]</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="collaborations">
+      <h1>Collaborations</h1>
+      <div class="collaborations-grid">
+        <article class="collab-card">
+          <h3>[Collaborator]</h3>
+          <p>[Collaboration details]</p>
+          <p><strong>Project:</strong> [Project name]</p>
+        </article>
+
+        <article class="collab-card">
+          <h3>[Collaborator]</h3>
+          <p>[Collaboration details]</p>
+          <p><strong>Project:</strong> [Project name]</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h1>Contact</h1>
+      <div class="contact-info">
+        <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
+        <p>LinkedIn: <a href="https://linkedin.com/in/you" target="_blank">linkedin.com/in/you</a></p>
+        <p>GitHub: <a href="https://github.com/you" target="_blank">github.com/you</a></p>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2025 Your Name. All rights reserved.</p>
+  </footer>
 </body>
 </html>
