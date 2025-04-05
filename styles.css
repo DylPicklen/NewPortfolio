@@ -69,6 +69,7 @@ nav ul {
   gap: 1.2rem;
   margin-top: 1rem;
   padding: 0;
+  position: sticky;
 }
 
 nav a {
