@@ -3,132 +3,210 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Portfolio</title>
+    <title>Your Name</title>
     <style>
-        /* General Styles */
-        body {
-            font-family: Arial, sans-serif;
-            line-height: 1.6;
+        /* Minimalist Reset */
+        * {
             margin: 0;
             padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
+            box-sizing: border-box;
         }
 
-        /* Header and Navigation */
+        /* Base Styles */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: #fff;
+        }
+
+        /* Profile Photo */
+        .profile-photo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin: 2rem auto;
+            display: block;
+            object-fit: cover;
+        }
+
+        /* Header */
         header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background-color: #333;
-            color: #fff;
             padding: 1rem;
-            z-index: 1000;
+            text-align: center;
+            border-bottom: 1px solid #eee;
         }
 
         nav ul {
             list-style: none;
             display: flex;
-            justify-content: space-around;
-            margin: 0;
-            padding: 0;
+            justify-content: center;
+            gap: 2rem;
+            margin-top: 1rem;
         }
 
         nav a {
-            color: #fff;
+            color: #666;
             text-decoration: none;
-            font-weight: bold;
+            font-size: 0.9rem;
+            transition: color 0.3s ease;
         }
 
         nav a:hover {
-            text-decoration: underline;
+            color: #333;
         }
 
         /* Main Content */
         main {
-            max-width: 800px;
-            margin: 5rem auto 2rem;
+            max-width: 680px;
+            margin: 3rem auto;
             padding: 0 1rem;
         }
 
         section {
-            padding: 2rem 0;
-            border-bottom: 1px solid #ccc;
+            margin: 4rem 0;
         }
 
         h1 {
-            font-size: 2rem;
-            color: #333;
-            margin-bottom: 1rem;
+            font-weight: 500;
+            font-size: 1.4rem;
+            margin-bottom: 1.5rem;
+            color: #222;
         }
 
         p {
-            font-size: 1rem;
             color: #555;
+            font-size: 1rem;
+            line-height: 1.8;
+            margin-bottom: 1.5rem;
+        }
+
+        /* Projects Grid */
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .project-card {
+            padding: 1.5rem;
+            border: 1px solid #eee;
+            border-radius: 8px;
+        }
+
+        /* Contact Section */
+        .contact-info {
+            margin-top: 2rem;
         }
 
         /* Footer */
         footer {
             text-align: center;
-            padding: 1rem;
-            background-color: #333;
-            color: #fff;
-            margin-top: 2rem;
+            padding: 3rem 1rem;
+            color: #888;
+            font-size: 0.9rem;
+            border-top: 1px solid #eee;
         }
 
-        /* Responsive Design */
+        /* Responsive */
         @media (max-width: 600px) {
             nav ul {
-                flex-direction: column;
-                align-items: center;
+                flex-wrap: wrap;
+                gap: 1rem;
             }
-
-            nav li {
-                margin: 0.5rem 0;
-            }
-
-            main {
-                margin-top: 7rem;
+            
+            section {
+                margin: 3rem 0;
             }
         }
     </style>
 </head>
 <body>
     <header>
+        <!-- REPLACE THIS BASE64 IMAGE WITH your-photo.png -->
+        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAYAAAA8AXHiAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADNSURBVHgB7dixDcJAEETR2YQGBaChp6QhOkpKQkHkK5u7m9HqfZrt5Lxzzg9e4BfP9gEAAAAAAAAAAAAAAAAAAIA/2LYtrus6HvM8z2N1z/Mc67quY3X7vh/rvu/jt/Z9H+t1Xcfq3vd9rO/3O1b3eDzG+nw+x+o+AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPyfHw4kAZ+Yk4a7AAAAAElFTkSuQmCC" 
+             alt="Your Name" 
+             class="profile-photo">
+        
         <nav>
             <ul>
                 <li><a href="#about">About</a></li>
                 <li><a href="#work">Work</a></li>
                 <li><a href="#projects">Projects</a></li>
-                <li><a href="#collaborations">Collaborations</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     <main>
+        <!-- ABOUT SECTION -->
         <section id="about">
             <h1>About</h1>
-            <p>[Your Name] is a [Your Profession/Title] with a passion for [Your Interests]. With [X] years of experience, [he/she/they] specialize in [Your Specialties].</p>
+            <p>[Brief professional summary highlighting your core skills and experience. Keep this to 3-4 sentences.]</p>
         </section>
+
+        <!-- WORK EXPERIENCE -->
         <section id="work">
             <h1>Work</h1>
-            <p>Currently, [Your Name] works at [Your Company/Organization] as a [Your Job Title]. [He/She/They] have previously worked at [Previous Company/Organization] where [he/she/they] [Brief Description of Role].</p>
+            <div class="experience">
+                <!-- WORK ITEM 1 -->
+                <div class="work-item">
+                    <h2>[Job Title]</h2>
+                    <p>[Company Name] | [Dates]</p>
+                    <ul>
+                        <li>[Key achievement or responsibility]</li>
+                        <li>[Key achievement or responsibility]</li>
+                    </ul>
+                </div>
+                <!-- WORK ITEM 2 -->
+                <div class="work-item">
+                    <h2>[Job Title]</h2>
+                    <p>[Company Name] | [Dates]</p>
+                    <ul>
+                        <li>[Key achievement or responsibility]</li>
+                        <li>[Key achievement or responsibility]</li>
+                    </ul>
+                </div>
+            </div>
         </section>
+
+        <!-- PROJECTS SECTION -->
         <section id="projects">
             <h1>Projects</h1>
-            <p>Some of [Your Name]'s notable projects include [Project 1], [Project 2], and [Project 3]. These projects demonstrate [his/her/their] skills in [Relevant Skills].</p>
+            <div class="projects-grid">
+                <!-- PROJECT 1 -->
+                <div class="project-card">
+                    <h3>[Project Title]</h3>
+                    <p>[Brief project description (1-2 sentences)]</p>
+                    <p><strong>Technologies:</strong> [List key technologies used]</p>
+                </div>
+                <!-- PROJECT 2 -->
+                <div class="project-card">
+                    <h3>[Project Title]</h3>
+                    <p>[Brief project description (1-2 sentences)]</p>
+                    <p><strong>Technologies:</strong> [List key technologies used]</p>
+                </div>
+                <!-- PROJECT 3 -->
+                <div class="project-card">
+                    <h3>[Project Title]</h3>
+                    <p>[Brief project description (1-2 sentences)]</p>
+                    <p><strong>Technologies:</strong> [List key technologies used]</p>
+                </div>
+            </div>
         </section>
-        <section id="collaborations">
-            <h1>Collaborations</h1>
-            <p>[Your Name] has collaborated with [Collaborator 1], [Collaborator 2], and [Collaborator 3] on various projects, including [Collaboration Project].</p>
-        </section>
+
+        <!-- CONTACT SECTION -->
         <section id="contact">
             <h1>Contact</h1>
-            <p>You can reach [Your Name] at [Your Email Address] or connect on [LinkedIn/Twitter/Other Social Media].</p>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:[your.email@example.com]">[your.email@example.com]</a></p>
+                <p>LinkedIn: <a href="[Your LinkedIn URL]">[linkedin.com/in/yourprofile]</a></p>
+                <p>GitHub: <a href="[Your GitHub URL]">[github.com/yourusername]</a></p>
+            </div>
         </section>
     </main>
     <footer>
-        <p>© 2023 Your Name. All rights reserved.</p>
+        <p>© 2023 Your Name</p>
     </footer>
 </body>
 </html>
