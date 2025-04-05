@@ -36,8 +36,9 @@ nav ul {
     list-style: none;
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 1.5rem;
     margin-top: 1rem;
+    padding: 1rem 0;
 }
 
 nav a {
@@ -60,14 +61,14 @@ main {
 }
 
 section {
-    margin: 3rem 0;
+    margin: 4rem 0;
     padding: 2rem 0;
 }
 
 h1 {
     font-weight: 500;
     font-size: 1.8rem;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.8rem;
     color: #222;
 }
 
@@ -97,6 +98,21 @@ p {
 
 .project-card:hover {
     transform: translateY(-3px);
+}
+
+/* Collaborations Grid */
+.collaborations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.collab-card {
+    padding: 1.5rem;
+    border: 1px solid #eee;
+    border-radius: 8px;
+    text-align: center;
 }
 
 /* Work Experience */
@@ -131,8 +147,8 @@ footer {
 @media (max-width: 600px) {
     nav ul {
         flex-direction: column;
-        gap: 0.5rem;
-        padding: 1rem 0;
+        gap: 1rem;
+        padding: 1.5rem 0;
     }
     
     nav a {
@@ -145,30 +161,28 @@ footer {
         height: 120px;
     }
 
-    .projects-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .project-card {
-        padding: 1rem;
-    }
-
-    .work-item {
-        padding: 1rem;
-        margin-bottom: 1.5rem;
-    }
-
     section {
-        margin: 2rem 0;
-        padding: 1.5rem 0;
+        margin: 3rem 0;
+        padding: 2rem 0;
     }
 
     h1 {
-        font-size: 1.6rem;
+        font-size: 1.8rem;
     }
 
     main {
         padding: 0 1rem;
+    }
+
+    .project-card,
+    .collab-card {
+        padding: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .projects-grid,
+    .collaborations-grid {
+        grid-template-columns: 1fr;
     }
 }
 
