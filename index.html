@@ -5,244 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="format-detection" content="telephone=no">
     <title>Your Name</title>
-    <style>
-        /* Minimalist Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        /* Base Styles */
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: #fff;
-            font-size: 16px;
-        }
-
-        /* Profile Photo */
-        .profile-photo {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            margin: 1rem auto;
-            display: block;
-            object-fit: cover;
-            max-width: 100%;
-        }
-
-        /* Header */
-        header {
-            padding: 1rem;
-            text-align: center;
-            border-bottom: 1px solid #eee;
-        }
-
-        nav ul {
-            list-style: none;
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 1rem;
-        }
-
-        nav a {
-            color: #666;
-            text-decoration: none;
-            font-size: 0.9rem;
-            transition: color 0.3s ease;
-            padding: 0.5rem 1rem;
-        }
-
-        nav a:hover {
-            color: #333;
-        }
-
-        /* Main Content */
-        main {
-            max-width: 800px;
-            margin: 2rem auto;
-            padding: 0 2rem;
-        }
-
-        section {
-            margin: 3rem 0;
-            padding: 2rem 0;
-        }
-
-        h1 {
-            font-weight: 500;
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
-            color: #222;
-        }
-
-        p {
-            color: #555;
-            line-height: 1.8;
-            margin-bottom: 1.5rem;
-            max-width: 70ch;
-            margin-left: auto;
-            margin-right: auto;
-        }
-
-        /* Projects Grid */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 2rem;
-            margin-top: 2rem;
-        }
-
-        .project-card {
-            padding: 1.5rem;
-            border: 1px solid #eee;
-            border-radius: 8px;
-            transition: transform 0.2s ease;
-        }
-
-        .project-card:hover {
-            transform: translateY(-3px);
-        }
-
-        /* Work Experience */
-        .experience {
-            display: grid;
-            gap: 2rem;
-        }
-
-        .work-item {
-            padding: 1.5rem;
-            border-left: 3px solid #eee;
-            max-width: 80ch;
-            margin: 0 auto;
-        }
-
-        /* Contact Section */
-        .contact-info {
-            margin-top: 2rem;
-            text-align: center;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 3rem 1rem;
-            color: #888;
-            font-size: 0.9rem;
-            border-top: 1px solid #eee;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 600px) {
-            nav ul {
-                flex-direction: column;
-                gap: 0.5rem;
-                padding: 1rem 0;
-            }
-            
-            nav a {
-                font-size: 1rem;
-                display: block;
-            }
-
-            .profile-photo {
-                width: 120px;
-                height: 120px;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .project-card {
-                padding: 1rem;
-            }
-
-            .work-item {
-                padding: 1rem;
-                margin-bottom: 1.5rem;
-            }
-
-            section {
-                margin: 2rem 0;
-                padding: 1.5rem 0;
-            }
-
-            h1 {
-                font-size: 1.6rem;
-            }
-
-            main {
-                padding: 0 1rem;
-            }
-        }
-
-        @media (min-width: 768px) {
-            body {
-                font-size: 18px;
-            }
-            
-            h1 {
-                font-size: 2.2rem;
-                margin-bottom: 2rem;
-            }
-
-            main {
-                margin: 4rem auto;
-            }
-
-            section {
-                margin: 4rem 0;
-                padding: 3rem 0;
-            }
-
-            .projects-grid {
-                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-                gap: 3rem;
-            }
-
-            .experience {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 3rem;
-            }
-
-            .work-item {
-                padding: 2rem;
-            }
-        }
-
-        @media (min-width: 1200px) {
-            main {
-                max-width: 1000px;
-            }
-            
-            .projects-grid {
-                grid-template-columns: repeat(3, 1fr);
-            }
-        }
-
-        @media (prefers-reduced-motion: no-preference) {
-            .project-card {
-                transition: all 0.3s ease;
-            }
-        }
-
-        @media print {
-            nav { 
-                display: none; 
-            }
-            .profile-photo { 
-                width: 100px; 
-            }
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <!-- REPLACE THIS IMAGE WITH your-photo.png -->
         <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAJYAAACWCAYAAAA8AXHiAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAADNSURBVHgB7dixDcJAEETR2YQGBaChp6QhOkpKQkHkK5u7m9HqfZrt5Lxzzg9e4BfP9gEAAAAAAAAAAAAAAAAAAIA/2LYtrus6HvM8z2N1z/Mc67quY3X7vh/rvu/jt/Z9H+t1Xcfq3vd9rO/3O1b3eDzG+nw+x+o+AgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAPyfHw4kAZ+Yk4a7AAAAAElFTkSuQmCC" 
              alt="Your Name" 
              class="profile-photo">
@@ -257,69 +23,60 @@
         </nav>
     </header>
     <main>
-        <!-- ABOUT SECTION -->
         <section id="about">
             <h1>About</h1>
-            <p>[Brief professional summary highlighting your core skills and experience. Keep this to 3-4 sentences.]</p>
+            <p>[Brief professional summary]</p>
         </section>
 
-        <!-- WORK EXPERIENCE -->
         <section id="work">
             <h1>Work</h1>
             <div class="experience">
-                <!-- WORK ITEM 1 -->
                 <div class="work-item">
                     <h2>[Job Title]</h2>
                     <p>[Company Name] | [Dates]</p>
                     <ul>
-                        <li>[Key achievement or responsibility]</li>
-                        <li>[Key achievement or responsibility]</li>
+                        <li>[Key achievement]</li>
+                        <li>[Key responsibility]</li>
                     </ul>
                 </div>
-                <!-- WORK ITEM 2 -->
                 <div class="work-item">
                     <h2>[Job Title]</h2>
                     <p>[Company Name] | [Dates]</p>
                     <ul>
-                        <li>[Key achievement or responsibility]</li>
-                        <li>[Key achievement or responsibility]</li>
+                        <li>[Key achievement]</li>
+                        <li>[Key responsibility]</li>
                     </ul>
                 </div>
             </div>
         </section>
 
-        <!-- PROJECTS SECTION -->
         <section id="projects">
             <h1>Projects</h1>
             <div class="projects-grid">
-                <!-- PROJECT 1 -->
                 <div class="project-card">
                     <h3>[Project Title]</h3>
-                    <p>[Brief project description (1-2 sentences)]</p>
-                    <p><strong>Technologies:</strong> [List key technologies used]</p>
+                    <p>[Project description]</p>
+                    <p><strong>Technologies:</strong> [Tech list]</p>
                 </div>
-                <!-- PROJECT 2 -->
                 <div class="project-card">
                     <h3>[Project Title]</h3>
-                    <p>[Brief project description (1-2 sentences)]</p>
-                    <p><strong>Technologies:</strong> [List key technologies used]</p>
+                    <p>[Project description]</p>
+                    <p><strong>Technologies:</strong> [Tech list]</p>
                 </div>
-                <!-- PROJECT 3 -->
                 <div class="project-card">
                     <h3>[Project Title]</h3>
-                    <p>[Brief project description (1-2 sentences)]</p>
-                    <p><strong>Technologies:</strong> [List key technologies used]</p>
+                    <p>[Project description]</p>
+                    <p><strong>Technologies:</strong> [Tech list]</p>
                 </div>
             </div>
         </section>
 
-        <!-- CONTACT SECTION -->
         <section id="contact">
             <h1>Contact</h1>
             <div class="contact-info">
-                <p>Email: <a href="mailto:[your.email@example.com]">[your.email@example.com]</a></p>
-                <p>LinkedIn: <a href="[Your LinkedIn URL]">[linkedin.com/in/yourprofile]</a></p>
-                <p>GitHub: <a href="[Your GitHub URL]">[github.com/yourusername]</a></p>
+                <p>Email: <a href="mailto:[email]">[your.email@example.com]</a></p>
+                <p>LinkedIn: <a href="[URL]">[linkedin.com/in/yourprofile]</a></p>
+                <p>GitHub: <a href="[URL]">[github.com/yourusername]</a></p>
             </div>
         </section>
     </main>
